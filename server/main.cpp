@@ -2,9 +2,9 @@
 
 int main()
 {
-    server srv;
+    Server *srv = new Server();
 
-    srv.run();
+    srv->run();
 
     return 0;
 }

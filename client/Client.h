@@ -8,11 +8,12 @@
 #include <string>
 
 
-class client
+class Client
 {
 private:
-    void send_file(boost::asio::ip::tcp::socket& socket, std::string& path);
-
+    void check_file(std::ifstream& file, std::string &path);
+    void send_file(boost::asio::ip::tcp::socket& socket, std::ifstream& file);
+    void take_comands(boost::asio::ip::tcp::socket& socket);
     void receive_file(boost::asio::ip::tcp::socket &socket, const std::string &path);
 
 public:

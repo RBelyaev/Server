@@ -3,9 +3,9 @@
 
 int main()
 {
-    client clt;
+    Client* clt = new Client();
 
-    clt.run();
+    clt->run();
 
     return 0;
 }
